@@ -1,5 +1,6 @@
 const clipMarkup = `
 <div class="clip-container">
+    <div class="clip">
     <div class="clip-header">
         <div class="clip-title">#1</div>
         <div class="clip-x">-</div>
@@ -20,6 +21,7 @@ const clipMarkup = `
         <div class="form-label">exclude</div>
         <input id="exclude" class="form-input"></input>
     </div>
+    </div>
 </div>
 `;
 
@@ -36,7 +38,7 @@ let rerenderClips = () => {
     clips.forEach(clip => {
         const el = document.createElement("div");
         el.innerHTML = clipMarkup;
-        el.getElementById("prepend").value = clip.prepend;
+        // el.getElementById("prepend").value = clip.prepend;
         clipsEl.appendChild(el);
     })
 }
@@ -51,4 +53,6 @@ let addClip = () => {
     rerenderClips();
 }
 
-document.getElementById("add").onclick = addClip;
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById("add").onclick = addClip;
+});

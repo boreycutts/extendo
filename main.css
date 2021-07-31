@@ -41,7 +41,23 @@ body {
     padding-bottom: 1em;
 }
 
+.super-clip-container {
+    position: relative;
+}
+
+.clip {
+    position: relative;
+    width: 400px;
+    padding: 1em;
+    color: rgb(143,188,143);
+    background: #333;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 200;
+}
+
 .clip-container {
+    position: absolute;
     width: 400px;
     padding: 1em;
     color: #333;
